@@ -1,0 +1,168 @@
+/* Definição de fontes */
+@font-face {
+  font-family: "Unbounded";
+  src: url("../fonts/Unbounded-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Reset */
+* {
+  /* tira espaços padrão */
+  margin: 0;
+  padding: 0;
+  /* ajuda no cálculo de largura */
+  box-sizing: border-box;
+}
+
+/* evita barra lateral horizontal */
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* imagens sempre se ajustam */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* cores base da página */
+body {
+  background-color: #0e1014;
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+/* área principal ocupando tudo */
+main {
+  width: 100%;
+}
+
+/* logo no topo */
+header img {
+  display: block;
+  width: auto;
+  margin: 75px 0 0 360px;
+}
+
+/* limita conteúdo central */
+section {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-inline: 1rem;
+  padding-bottom: 32px;
+}
+
+/* título principal */
+h1 {
+  font-size: clamp(40px, 6.2vw, 64px);
+  font-family: "Unbounded", sans-serif;
+  text-align: center;
+  line-height: 1.1;
+  margin-top: clamp(28px, 5vw, 60px);
+}
+
+/* destaque roxo no título */
+h1 span {
+  color: #9747ff;
+}
+
+/* texto de descrição */
+p {
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(18px, 2.6vw, 24px);
+  line-height: 1.45;
+  text-align: center;
+  margin: 24px auto 0;
+  max-width: 792px;
+  width: 100%;
+}
+
+/* botão principal */
+a {
+  color: #ffffff;
+  font-family: "Poppins", sans-serif;
+  font-size: clamp(18px, 2.4vw, 24px);
+  text-decoration: none;
+  background-color: #9747ff;
+  width: min(340px, 100%);
+  min-height: 66px;
+  padding: 16px 24px;
+  display: block;
+  text-align: center;
+  line-height: 1.4;
+  border-radius: 36px;
+  margin: 40px auto;
+}
+
+/* efeito quando passa o mouse */
+a:hover {
+  background-color: #8233e8;
+}
+
+/* imagem dos celulares */
+section img {
+  display: block;
+  width: 100%;
+  max-width: 792px;
+  margin: 0 auto;
+}
+
+/* ajuste para tablet */
+@media (max-width: 1024px) {
+  header img {
+    margin: 65px 0 0 60px;
+  }
+
+  p {
+    max-width: 648px;
+  }
+}
+
+/* ajuste para celular */
+@media (max-width: 768px) {
+  section {
+    padding-inline: 0.75rem;
+  }
+
+  header img {
+    margin: 32px 0 0 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 20px;
+    max-width: 100%;
+  }
+
+  section img {
+    max-width: 100%;
+  }
+}
+
+/* ajuste para telas bem pequenas */
+@media (max-width: 420px) {
+  h1 {
+    font-size: 34px;
+  }
+
+  a {
+    width: 100%;
+    border-radius: 20px;
+  }
+}
